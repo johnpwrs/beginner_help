@@ -2,7 +2,16 @@
 
   <body>
     <script>
+      const adjectives = ['interesting', 'fun', 'compelling', 'captivating', 'riveting']
       console.log('You can write code here and run it in your browser');
+      document.body.innerHTML = `<h1>Something a bit more ${adjectives[0]}</h1>`;
+      
+      let counter = 0;
+      setInterval(() => {
+        const index = counter % adjectives.length;
+        document.body.innerHTML = `<h1>Something a bit more ${adjectives[index]}</h1>`;
+        counter++;
+      }, 1000)
     </script>
   </body>
 
